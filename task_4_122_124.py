@@ -12,17 +12,27 @@ a, b, c = float(input()), float(input()), float(input())
 
 if a < b + c and b < a + c and c < a + b:
     print("треугольник существует")
+
     if c <= a >= b:
         max = a
     elif a <= b >= c:
         max = b
     else:
         max = c
+
     if max ** 2 == a ** 2 + b ** 2 + c ** 2 - max ** 2:
         print("прямоугольный")
     elif max ** 2 > a ** 2 + b ** 2 + c ** 2 - max ** 2:
         print("тупоугольный")
     else:
         print("остроугольный")
+
+    if a==b==c:
+        print("равносторонний")
+    elif a!=b!=c:
+        print("разносторонний")
+    else:
+        print("равнобедренный")
+
 else:
     print("треугольник не существует")
